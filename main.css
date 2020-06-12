@@ -7,25 +7,25 @@
   box-sizing: border-box; 
 }
 
+html, 
+body {
+  height: 100%;
+  font-size: 1em; 
+}
+
 html {
   display: flex; 
   justify-content: center;
   align-items: center;
-  background-color: #0fa66e;
+  background-color: #f2785c;
 }
- 
+
 body {
-  height: 100%;
-  font-size: 1em; 
   background-color: #fff; 
   width: 70%; 
   margin-left: auto; 
   margin-right: auto; 
   padding: 30px; 
-}
-
-main {
-  background-color: #fff; 
 }
 
 ul {

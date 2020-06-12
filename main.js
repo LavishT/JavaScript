@@ -1,51 +1,23 @@
 // JavaScript Document
 
-//1.) Add a new paragraph to the page
-let main = document.querySelector('main');
-let newPara = document.createElement('p');
-main.appendChild(newPara);
-//let text = document.createTextNode('Hello World');
-//newPara.appendChild(text);
-//console.log(newPara);
-newPara.textContent='Hello World!!!!!';
+//1.) Using ol as your starting element, target the first li element 
+let startElement = document.querySelector('ol');
+let firstChild = startElement.firstElementChild;
+console.log(firstChild);
+
+//2.) using main as your starting element, what is the last child? console.log to check it out 
+let startElement2 = document.querySelector('main');
+let lastChild = startElement2.lastElementChild;
+console.log(lastChild);
 
 
-//2.) Remove the class attribute on the header element 
-let Class = document.querySelector('.coolcat');
-console.log(Class);
-let parent = document.querySelector('body');
-parent.removeChild(Class);
+//3.) using html as your starting element, what is the last Element child? Console.log to check it out. 
+let startElement3 = document.querySelector('html');
+let lastChild2 = startElement3.lastElementChild;
+console.log(lastChild2);
 
-//3.) Change the src attribute in the image element to 'cat2.jpg'
-let image = document.querySelector('img');
-console.log(image);
-image.setAttribute('src','assets/cat2.jpg');
 
-// Changing image on click!!
-
-image.addEventListener('click', changeImage);
-
-function changeImage()
-
-{let mySrc=image.getAttribute('src');
-
- if(mySrc==='assets/cat1.jpg') {
-   image.setAttribute ('src' , 'assets/cat2.jpg');
-  }
-  else {
-    image.setAttribute ('src' , 'assets/cat1.jpg');
-   }
- }
-//4.) Remove the footer element 
-let footer = document.querySelector('footer');
-let parent2 = document.querySelector('body')
-parent2.removeChild(footer);
-
-//5.) Add an h3 into the header 
-let head = document.querySelector('head');
-let header = document.createElement('header')
-head.appendChild(header);
-let newheading = document.createElement('h3');
-console.log(newheading);
-header.appendChild(newheading);
-
+//4.) using the second li element as your starting element, target the next li element and change the colour to purple. 
+let startElement4 = document.querySelectorAll('li')[1];
+let nextElement = startElement4.nextElementSibling;
+nextElement.innerHTML = '<font color = "Purple">The Persian.</font>';
