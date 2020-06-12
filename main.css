@@ -7,30 +7,25 @@
   box-sizing: border-box; 
 }
 
-html, 
-body {
-  height: 100%;
-  font-size: 1em; 
-}
-
 html {
   display: flex; 
   justify-content: center;
   align-items: center;
-  background-color: #F2A766;
+  background-color: #0fa66e;
 }
-
+ 
 body {
-  text-align: center;
+  height: 100%;
+  font-size: 1em; 
   background-color: #fff; 
-  
-}
-
-.inner {
   width: 70%; 
   margin-left: auto; 
   margin-right: auto; 
   padding: 30px; 
+}
+
+main {
+  background-color: #fff; 
 }
 
 ul {
@@ -45,8 +40,9 @@ ul li {
 }
 
 h1 {
+  text-align:center; 
   font-size: 4em; 
-  padding : 60px 0; 
+  padding-bottom: 60px;
   font-family: 'Bangers', cursive;
 }
 

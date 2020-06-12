@@ -1,37 +1,51 @@
 // JavaScript Document
 
-//1.)  find two different ways to target the first section element on the page. Use console.log to check. Put a comment with the word faster by the method that targets the element more quickly and efficently. 
-let fir_sec = document.querySelector('section');
-console.log(fir_sec);
-let fir_sec_2 = document.querySelectorAll('section')[0];
-console.log(fir_sec_2);
-let h2 = document.querySelector('h2');
-let parentNode = h2.parentNode;
-console.log(parentNode);
+//1.) Add a new paragraph to the page
+let main = document.querySelector('main');
+let newPara = document.createElement('p');
+main.appendChild(newPara);
+//let text = document.createTextNode('Hello World');
+//newPara.appendChild(text);
+//console.log(newPara);
+newPara.textContent='Hello World!!!!!';
 
-//2.)  Target the footer element. Use console.log to check 
- let footer = document.querySelector('footer');
- console.log(footer);
 
-//3.)  Target all elements with the class or orange and change the text in these elements orange 
-let Class = document.querySelectorAll('.orange');
+//2.) Remove the class attribute on the header element 
+let Class = document.querySelector('.coolcat');
 console.log(Class);
-Class.textContent = 'orange';
-let p1 = document.querySelector('p');
-p1.textContent = 'orange';
-let p3 = document.querySelectorAll('p')[2];
-p3.textContent = 'orange';
+let parent = document.querySelector('body');
+parent.removeChild(Class);
 
-//4.) Target all section elements and console log 
-let section = document.querySelectorAll('section');
-console.log(section);
+//3.) Change the src attribute in the image element to 'cat2.jpg'
+let image = document.querySelector('img');
+console.log(image);
+image.setAttribute('src','assets/cat2.jpg');
 
-//5.) Find two ways to target the second section element 
-let section2 = document.querySelectorAll('section')[1];
-console.log(section2);
-let para = document.querySelectorAll('p')[2];
-let previousSibling = para.previousElementSibling;
-console.log(para,previousSibling);
-let para2 = document.querySelector('p');
-let nextSibling = para2.nextElementSibling;
-console.log(para2,nextSibling);
+// Changing image on click!!
+
+image.addEventListener('click', changeImage);
+
+function changeImage()
+
+{let mySrc=image.getAttribute('src');
+
+ if(mySrc==='assets/cat1.jpg') {
+   image.setAttribute ('src' , 'assets/cat2.jpg');
+  }
+  else {
+    image.setAttribute ('src' , 'assets/cat1.jpg');
+   }
+ }
+//4.) Remove the footer element 
+let footer = document.querySelector('footer');
+let parent2 = document.querySelector('body')
+parent2.removeChild(footer);
+
+//5.) Add an h3 into the header 
+let head = document.querySelector('head');
+let header = document.createElement('header')
+head.appendChild(header);
+let newheading = document.createElement('h3');
+console.log(newheading);
+header.appendChild(newheading);
+
